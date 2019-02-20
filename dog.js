@@ -55,18 +55,18 @@ function randomBreedImg(e){
       myDog = str.replace("#","");
     }
     else {myDog = e.textContent};
-    getData("https://dog.ceo/api/breed/" + myDog + "/ images/random")
+    getData("https://dog.ceo/api/breeds/" + myDog + "/ image/random")
     .then(res => reqListener(res))
-    getData("https://dog.ceo/api/breed/" + myDog +"/list")
+    getData("https://dog.ceo/api/breeds/" + myDog +"/list")
     .then(res => getSubBreed(res));
   }
 
   function subBreed(e){
     if (e === window.location.hash) {
-      getData("https://dog.ceo/api/breed/" + myDog + "/" + breed +  "/images/random")
+      getData("https://dog.ceo/api/breeds/" + myDog + "/" + breed +  "/image/random")
     }
     else {breed = e.textContent};
-    getData("https://dog.ceo/api/breed/" + myDog + "/" + breed + "/images/random")
+    getData("https://dog.ceo/api/breeds/" + myDog + "/" + breed + "/image/random")
     .then(res => reqListener(res))
     .catch(error => console.error("Error:", error));
   }
