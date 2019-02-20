@@ -1,6 +1,6 @@
 body {
 
-    color :#fff;
+    color :#3fff;
 
     display: flex;
 
@@ -24,7 +24,7 @@ h1 {
 
     display: flex;
 
-    width: 90%;
+    width: 100%;
 
     justify-content: space-between;
 
@@ -44,13 +44,13 @@ h1 {
 
     height: 50px;
 
-    background-color: #333;
+    background-color: blue;
 
     border: none;
 
     color: white;
 
-    padding: 15px 32px;
+    padding: 15px 22px;
 
     text-align: center;
 
@@ -90,7 +90,7 @@ a {
 
     justify-content: space-around;
 
-    width: 90%;
+    width: 100%;
 
     padding-bottom: 40px;
 
