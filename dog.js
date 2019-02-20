@@ -103,10 +103,10 @@ function randomBreedImg(e){
       }
       for (let i = 0; i < array.length; i++) {
         let li = document.createElement("li");
-        let Atag = document.createElement("a");
-        Atag.setAttribute("href", "#" + myDog + "/" + array[i]);
-        Atag.setAttribute("onClick", "subBreed(this)");
-        Atag.textContent = (array[i]);
+        let element = document.createElement("a");
+        element.setAttribute("href", "#" + myDog + "/" + array[i]);
+        element.setAttribute("onClick", "subBreed(this)");
+        element.textContent = (array[i]);
         ulTag.appendChild(li);
         li.appendChild(aTag);
 
