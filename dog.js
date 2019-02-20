@@ -18,8 +18,8 @@ button.addEventListener("click", function(){
 function myFunction(){
   let url = window.location.toString();
   if (url.indexOf("#") > 0) {
-    let clean_url = url.substring(0, url.indexOf("#"));
-    window.history.replaceState({}, document.title, clean_url);
+    let clean = url.substring(0, url.indexOf("#"));
+    window.history.replaceState({}, document.title, clean);
 
   }
   getRandomDog();
@@ -75,12 +75,12 @@ function randomBreedImg(e){
     let obj = data.message;
     for (let key in obj) {
       let li = document.createElement("li");
-      let aTag =document.createElement("a");
-      aTag.textContent = (key);
-      aTag.setAttribute("href", "#" + key);
-      aTag.setAttribute("onClick", "randomdogs(this)");
+      let a =document.createElement("a");
+      a.textContent = (key);
+      a.setAttribute("href", "#" + key);
+      a.setAttribute("onClick", "randomdogs(this)");
       div.appendChild(li);
-      li.appendChild(aTag);
+      li.appendChild(a);
     }
     }
 
@@ -91,12 +91,12 @@ function randomBreedImg(e){
       let data = obj;
       let h2 = document.createElement("h2");
       h2.textContent = myDog + "sub Breeds:";
-      let ulTag = document.createElement("ul");
-      ulTag.setAttribute("id", "subBreedUl");
+      let ul = document.createElement("ul");
+      ul.setAttribute("id", "subBreedUl");
       if (data.length !== 0) {
         subbreeddog.appendChild(h2);
       }
-      subbreeddog.appendChild(ulTag);
+      subbreeddog.appendChild(ul);
       let array;
       for (let key in data) {
         array = data[key];
@@ -107,8 +107,8 @@ function randomBreedImg(e){
         element.setAttribute("href", "#" + myDog + "/" + array[i]);
         element.setAttribute("onClick", "subBreed(this)");
         element.textContent = (array[i]);
-        ulTag.appendChild(li);
-        li.appendChild(aTag);
+        ul.appendChild(li);
+        li.appendChild(a);
 
       }
     }
